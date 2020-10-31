@@ -1,0 +1,172 @@
+###############################################################################
+#                                                                             #
+#  This file is included by all the other Makefile types. Note that I do a    #
+#  very simple check to know if upx or djp are in your path, but none for     #
+#  tgz or zip...                                                              #
+#                                                                             #
+#  make clean      : Deletes the generated .o and .exe files (you need RM     #
+#                    from fileutils).                                         #
+#  make distclean  : Deletes the same files the clean target does, plus the   #
+#                    possible packages made with the last two targets.        #
+#  make tgz        : Creates a package which can be used to send by mail,     #
+#                    though it is not as good as the original one ;) You      #
+#                    need the tar compressor.                                 #
+#  make zip        : Same as tgz, but now creates it using zip compressor.    #
+#  make compress   : Compresses the generated executable. You need the upx    #
+#                    executable compressor somewhere in your path.            #
+#  make header     : Adds the copyleft notice to each source and header file  #
+#                    in the package.                                          #
+#                                                                             #
+#  ReyBrujo, 2002                                                             #
+#                                                                             #
+###############################################################################
+
+
+.PHONY: clean distclean tgz zip compress
+
+
+#                                                                             #
+#  The PACKAGE_TGZ and PACKAGE_ZIP declare the names of the final package.    #
+#  It uses ID_LONG by default, so make sure your file system allows for long  #
+#  names. This will create something like 'mypackage-0.1.2.tgz' (or .zip),    #
+#  which you can deliver as a source release of your game, or as a backup.    #
+#  Finally, the PACKAGE_OBJ defines the objects that will be included into    #
+#  the final package.                                                         #
+#                                                                             #
+PACKAGE_TGZ = $(addsuffix .tgz, $(ID_LONG))
+PACKAGE_ZIP = $(addsuffix .zip, $(ID_LONG))
+PACKAGE_OBJ = fix.bat    \
+              $(MAK_DIR) \
+              $(SRC_DIR) \
+              $(OBJ_DIR) \
+              $(INC_DIR) \
+              $(DOC_DIR) \
+              $(BIN_DIR)
+
+
+#                                                                             #
+#  HEADERS will contain all the headers (.h) and source (.c, .cpp, etc) that  #
+#  will be processed in order to add the copyleft notice.                     #
+#                                                                             #
+COPYLEFT := $(MSC_DIR)/license.h
+HEADERS  := $(addprefix $(SRC_DIR)/,$(FILES))
+HEADERS  += $(basename $(wildcard $(INC_DIR)/*.h))
+HEADERS  := $(addsuffix .tmp,$(HEADERS))
+
+
+
+###############################################################################
+#                                                                             #
+#                        END OF CONFIGURATION SECTION                         #
+#                                                                             #
+###############################################################################
+
+
+
+#                                                                             #
+#  The clean target deletes the executable, the object files and the runner,  #
+#  if it was created. If you have added more directories to the object one,   #
+#  in example to separate objects, you will have to add those directories     #
+#  manually like $(OBJ_DIR)/*/*.o* for the second level, $(OBJ_DIR)/*/*/*.o*  #
+#  for the third level of depth, etc.                                         #
+#                                                                             #
+clean:
+	$(RM) $(RMFLAGS) $(EXEC) $(OBJDIR)/*.$(OBJ_SUFFIX) $(OBJDIR)/*/*.$(OBJ_SUFFIX) $(RUNNER)
+
+
+
+#                                                                             #
+#  The distclean target lets the package with just the files that came with   #
+#  the distribution. It deletes all the files 'clean' does, but also ALL the  #
+#  backup copies! So be careful when using it!                                #
+#                                                                             #
+distclean: clean
+	$(RM) $(RMFLAGS) $(OBJ_DIR)/*.$(OBJ_SUFFIX)* $(OBJ_DIR)/*/*.$(OBJ_SUFFIX)* $(OBJ_DIR)/*/*/*.$(OBJ_SUFFIX)*
+	$(RM) $(RMFLAGS) $(PACKAGE_TGZ) $(PACKAGE_ZIP) 
+
+
+
+tags: $(SRC_DIR)/*.cpp $(SRC_DIR)/*.h
+	$(CTAGS) $(CTAGSFLAGS) $(SRC_DIR)/*.cpp $(SRC_DIR)/*.h
+
+#                                                                             #
+#  Build a tar & gzipped package (or whatever you have configured).           #
+#                                                                             #
+tgz: distclean
+	$(TGZ) $(TGZFLAGS) $(PACKAGE_TGZ) $(PACKAGE_OBJ)
+	@echo
+	@echo The package $(PACKAGE_TGZ) has been created. Just to be sure, it
+	@echo is not as good as the original package, but still works *grin*
+
+
+
+#                                                                             #
+#  Build a zip package (or whatever you have configured).                     #
+#                                                                             #
+zip: distclean
+	$(ZIP) $(ZIPFLAGS) $(PACKAGE_ZIP) $(PACKAGE_OBJ)
+	@echo
+	@echo The package $(PACKAGE_ZIP) has been created. Just to be sure, it
+	@echo is not as good as the original package, but still works *grin*
+
+
+
+#                                                                             #
+#  Oh, this target is a bit complex. I would have done it manually ;) I try   #
+#  to find an executable compressor (upx or djp) in the current path.         #
+#                                                                             #
+MPATH  := $(subst ;, ,$(subst \,/,$(PATH)))
+UPXPRG := $(foreach GUESS, $(MPATH), $(wildcard $(GUESS)/upx.exe))
+DJPPRG := $(foreach GUESS, $(MPATH), $(wildcard $(GUESS)/djp.exe))
+
+ifneq ($(UPXPRG),)
+	COMPRESSOR := $(UPXPRG)
+	COMP_FLAGS := --best
+else
+ifneq ($(DJPPRG),)
+	COMPRESSOR := $(DJPPRG)
+	COMP_FLAGS := -s
+endif
+endif
+
+compress:
+ifdef COMPRESSOR
+	$(COMPRESSOR) $(COMP_FLAGS) $(EXEC)
+else
+	@echo Could not guess upx or djp compressor location. If you have
+	@echo another installed, configure it manually.
+endif
+
+
+
+#                                                                             #
+#  The depend target builds the different dependencies between source files   #
+#  and headers. It needs DJGPP.                                               #
+#                                                                             #
+depend:
+	$(GCC) $(DEPFLAGS) $(SRC_DIR)/*.$(SRC_SUFFIX) > _depend1.tmp
+	sed -e "s/^\([a-zA-Z0-9_]*\)\.o:/$(subst /,\/,$(OBJDIR))\/\1\.$(OBJ_SUFFIX):/" _depend1.tmp > _depend2.tmp
+	cat _depend2.tmp > $(OBJDIR)/makefile.dep
+	$(RM) $(RMFLAGS) _depend*.tmp
+
+
+
+#                                                                             #
+#  The 'header' target adds the GNU copyleft notice to each source file in    #
+#  the package. Note that there is no easy way to "undo" this action, so you  #
+#  should only call it with your finished package.                            #
+#  What it does is basically catting the notice and then the source into a    #
+#  temporary file, and then moving the temporary file into the original one.  #
+#                                                                             #
+header: $(HEADERS)
+	@echo Added copyleft notice to $(words $(HEADERS)) files.
+
+%.tmp : %.$(SRC_SUFFIX)
+	@echo Adding copyleft notice to $<...
+	@cat $(COPYLEFT) $< > $@
+	@mv $@ $<
+
+%.tmp : %.h
+	@echo Adding copyleft notice to $<...
+	@cat $(COPYLEFT) $< > $@
+	@mv $@ $<

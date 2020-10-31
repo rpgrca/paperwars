@@ -1,0 +1,11 @@
+#ifndef _PLAYERTYPE_H_INCLUDED
+#define _PLAYERTYPE_H_INCLUDED 0xBEBACAFE
+
+typedef enum enPlayerType {
+    enPLAYERTYPE_NONE = 0,
+    enPLAYERTYPE_UNKNOWN = 1,
+    enPLAYERTYPE_HUMAN = 2,
+    enPLAYERTYPE_CPU = 3
+} enPlayerType;
+
+#endif // _PLAYERTYPE_H_INCLUDED
