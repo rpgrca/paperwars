@@ -17,8 +17,8 @@
 COMPILER := $(GPP)
 LINKER   := $(GPP)
 OBJDIR   := $(OBJ_DIR)/linux
-COMPILER_FLAGS := $(CFLAGS)
-#COMPILER_FLAGS := $(subst -Werror,,$(CFLAGS))
+#COMPILER_FLAGS := $(CFLAGS)
+COMPILER_FLAGS := $(subst -Werror,,$(CXXFLAGS))
 #COMPILER_FLAGS := $(subst -Wall,,$(COMPILER_FLAGS))
 #COMPILER_FLAGS := $(subst -W,,$(COMPILER_FLAGS))
 

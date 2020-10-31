@@ -1,220 +1,221 @@
 obj/linux/Battalion.o: src/Battalion.cpp src/Global.h src/SoldierManager.h \
-  src/SoldierFactory.h src/Soldier.h src/Object.h src/SoldierType.h \
-  src/Weapons.h src/Weapon.h src/WeaponType.h src/Armours.h src/Armour.h \
-  src/ArmourType.h src/SoldierFootman.h src/SoldierPikeman.h \
-  src/SoldierArcher.h src/SoldierCleric.h src/SoldierMage.h \
-  src/SoldierCavalier.h src/Soldiers.h src/ActionManager.h \
-  src/ActionFactory.h src/Action.h src/ActionType.h src/ActionWait.h \
-  src/ActionHighAttack.h src/ActionLowAttack.h src/ActionHighBlock.h \
-  src/ActionLowBlock.h src/ActionHighParry.h src/ActionLowParry.h \
-  src/ActionDamage.h src/ActionHeal.h src/ActionRevive.h \
-  src/ActionDestruction.h src/Actions.h src/CombatManager.h \
-  src/CombatType.h src/CombatFactory.h src/Combat.h src/CombatSimple.h \
-  src/CombatSoldierAgainstSoldier.h src/CombatSoldierAgainstBattalion.h \
-  src/CombatBattalionAgainstSoldier.h \
-  src/CombatBattalionAgainstBattalion.h src/Combats.h \
-  src/PositionManager.h src/PositionFactory.h src/Position.h \
-  src/Positions.h src/ObjectServices.h src/SoldierServices.h \
-  src/TerrainServices.h src/Terrain.h src/TerrainType.h \
-  src/TerrainProperty.h src/MapManager.h src/MapFactory.h src/Map.h \
-  src/Matrix.h src/Maps.h src/MapServices.h src/ArmourManager.h \
-  src/ArmourFactory.h src/ArmourHelm.h src/ArmourMail.h \
-  src/ArmourBracers.h src/ArmourGreaves.h src/ArmourBoots.h \
-  src/ArmourShield.h src/ArmourCloak.h src/WeaponManager.h \
-  src/WeaponFactory.h src/WeaponAxe.h src/WeaponSword.h src/WeaponBow.h \
-  src/WeaponKnife.h src/WeaponHalberd.h src/WeaponClub.h \
-  src/WeaponMagicWand.h src/Battalion.h
+ src/SoldierFactory.h src/Soldier.h src/Object.h src/SoldierType.h \
+ src/Weapons.h src/Weapon.h src/WeaponType.h src/Armours.h src/Armour.h \
+ src/ArmourType.h src/SoldierFootman.h src/SoldierPikeman.h \
+ src/SoldierArcher.h src/SoldierCleric.h src/SoldierMage.h \
+ src/SoldierCavalier.h src/SoldierMessenger.h src/Soldiers.h \
+ src/ActionManager.h src/ActionFactory.h src/Action.h src/ActionType.h \
+ src/ActionWait.h src/ActionHighAttack.h src/ActionLowAttack.h \
+ src/ActionHighBlock.h src/ActionLowBlock.h src/ActionHighParry.h \
+ src/ActionLowParry.h src/ActionDamage.h src/ActionHeal.h \
+ src/ActionRevive.h src/ActionDestruction.h src/Actions.h \
+ src/CombatManager.h src/CombatType.h src/CombatFactory.h src/Combat.h \
+ src/CombatSimple.h src/CombatSoldierAgainstSoldier.h \
+ src/CombatSoldierAgainstBattalion.h src/CombatBattalionAgainstSoldier.h \
+ src/CombatBattalionAgainstBattalion.h src/Combats.h \
+ src/PositionManager.h src/PositionFactory.h src/Position.h \
+ src/Positions.h src/ObjectServices.h src/SoldierServices.h \
+ src/TerrainServices.h src/Terrain.h src/TerrainType.h \
+ src/TerrainProperty.h src/MapManager.h src/MapFactory.h src/Map.h \
+ src/Matrix.h src/Maps.h src/MapServices.h src/ArmourManager.h \
+ src/ArmourFactory.h src/ArmourHelm.h src/ArmourMail.h \
+ src/ArmourBracers.h src/ArmourGreaves.h src/ArmourBoots.h \
+ src/ArmourShield.h src/ArmourCloak.h src/WeaponManager.h \
+ src/WeaponFactory.h src/WeaponAxe.h src/WeaponSword.h src/WeaponBow.h \
+ src/WeaponKnife.h src/WeaponHalberd.h src/WeaponClub.h \
+ src/WeaponMagicWand.h src/Battalion.h
 obj/linux/BattalionServices.o: src/BattalionServices.cpp src/BattalionServices.h \
-  src/Battalion.h src/Object.h src/Soldier.h src/SoldierType.h \
-  src/Weapons.h src/Weapon.h src/WeaponType.h src/Armours.h src/Armour.h \
-  src/ArmourType.h src/Soldiers.h src/Battalions.h
-obj/linux/CombatBattalionAgainstBattalion.o:  \
- src/CombatBattalionAgainstBattalion.cpp \
-  src/CombatBattalionAgainstBattalion.h src/Combat.h src/CombatType.h \
-  src/Object.h src/Actions.h src/Action.h src/ActionType.h src/Global.h \
-  src/SoldierManager.h src/SoldierFactory.h src/Soldier.h \
-  src/SoldierType.h src/Weapons.h src/Weapon.h src/WeaponType.h \
-  src/Armours.h src/Armour.h src/ArmourType.h src/SoldierFootman.h \
-  src/SoldierPikeman.h src/SoldierArcher.h src/SoldierCleric.h \
-  src/SoldierMage.h src/SoldierCavalier.h src/Soldiers.h \
-  src/ActionManager.h src/ActionFactory.h src/ActionWait.h \
-  src/ActionHighAttack.h src/ActionLowAttack.h src/ActionHighBlock.h \
-  src/ActionLowBlock.h src/ActionHighParry.h src/ActionLowParry.h \
-  src/ActionDamage.h src/ActionHeal.h src/ActionRevive.h \
-  src/ActionDestruction.h src/CombatManager.h src/CombatFactory.h \
-  src/CombatSimple.h src/CombatSoldierAgainstSoldier.h \
-  src/CombatSoldierAgainstBattalion.h src/CombatBattalionAgainstSoldier.h \
-  src/Combats.h src/PositionManager.h src/PositionFactory.h \
-  src/Position.h src/Positions.h src/ObjectServices.h \
-  src/SoldierServices.h src/TerrainServices.h src/Terrain.h \
-  src/TerrainType.h src/TerrainProperty.h src/MapManager.h \
-  src/MapFactory.h src/Map.h src/Matrix.h src/Maps.h src/MapServices.h \
-  src/ArmourManager.h src/ArmourFactory.h src/ArmourHelm.h \
-  src/ArmourMail.h src/ArmourBracers.h src/ArmourGreaves.h \
-  src/ArmourBoots.h src/ArmourShield.h src/ArmourCloak.h \
-  src/WeaponManager.h src/WeaponFactory.h src/WeaponAxe.h \
-  src/WeaponSword.h src/WeaponBow.h src/WeaponKnife.h src/WeaponHalberd.h \
-  src/WeaponClub.h src/WeaponMagicWand.h src/Battalion.h
-obj/linux/CombatBattalionAgainstSoldier.o: src/CombatBattalionAgainstSoldier.cpp \
-  src/CombatBattalionAgainstSoldier.h src/Combat.h src/CombatType.h \
-  src/Object.h src/Actions.h src/Action.h src/ActionType.h src/Global.h \
-  src/SoldierManager.h src/SoldierFactory.h src/Soldier.h \
-  src/SoldierType.h src/Weapons.h src/Weapon.h src/WeaponType.h \
-  src/Armours.h src/Armour.h src/ArmourType.h src/SoldierFootman.h \
-  src/SoldierPikeman.h src/SoldierArcher.h src/SoldierCleric.h \
-  src/SoldierMage.h src/SoldierCavalier.h src/Soldiers.h \
-  src/ActionManager.h src/ActionFactory.h src/ActionWait.h \
-  src/ActionHighAttack.h src/ActionLowAttack.h src/ActionHighBlock.h \
-  src/ActionLowBlock.h src/ActionHighParry.h src/ActionLowParry.h \
-  src/ActionDamage.h src/ActionHeal.h src/ActionRevive.h \
-  src/ActionDestruction.h src/CombatManager.h src/CombatFactory.h \
-  src/CombatSimple.h src/CombatSoldierAgainstSoldier.h \
-  src/CombatSoldierAgainstBattalion.h \
-  src/CombatBattalionAgainstBattalion.h src/Combats.h \
-  src/PositionManager.h src/PositionFactory.h src/Position.h \
-  src/Positions.h src/ObjectServices.h src/SoldierServices.h \
-  src/TerrainServices.h src/Terrain.h src/TerrainType.h \
-  src/TerrainProperty.h src/MapManager.h src/MapFactory.h src/Map.h \
-  src/Matrix.h src/Maps.h src/MapServices.h src/ArmourManager.h \
-  src/ArmourFactory.h src/ArmourHelm.h src/ArmourMail.h \
-  src/ArmourBracers.h src/ArmourGreaves.h src/ArmourBoots.h \
-  src/ArmourShield.h src/ArmourCloak.h src/WeaponManager.h \
-  src/WeaponFactory.h src/WeaponAxe.h src/WeaponSword.h src/WeaponBow.h \
-  src/WeaponKnife.h src/WeaponHalberd.h src/WeaponClub.h \
-  src/WeaponMagicWand.h src/Battalion.h
-obj/linux/CombatSoldierAgainstBattalion.o: src/CombatSoldierAgainstBattalion.cpp \
-  src/CombatSoldierAgainstBattalion.h src/Combat.h src/CombatType.h \
-  src/Object.h src/Actions.h src/Action.h src/ActionType.h src/Global.h \
-  src/SoldierManager.h src/SoldierFactory.h src/Soldier.h \
-  src/SoldierType.h src/Weapons.h src/Weapon.h src/WeaponType.h \
-  src/Armours.h src/Armour.h src/ArmourType.h src/SoldierFootman.h \
-  src/SoldierPikeman.h src/SoldierArcher.h src/SoldierCleric.h \
-  src/SoldierMage.h src/SoldierCavalier.h src/Soldiers.h \
-  src/ActionManager.h src/ActionFactory.h src/ActionWait.h \
-  src/ActionHighAttack.h src/ActionLowAttack.h src/ActionHighBlock.h \
-  src/ActionLowBlock.h src/ActionHighParry.h src/ActionLowParry.h \
-  src/ActionDamage.h src/ActionHeal.h src/ActionRevive.h \
-  src/ActionDestruction.h src/CombatManager.h src/CombatFactory.h \
-  src/CombatSimple.h src/CombatSoldierAgainstSoldier.h \
-  src/CombatBattalionAgainstSoldier.h \
-  src/CombatBattalionAgainstBattalion.h src/Combats.h \
-  src/PositionManager.h src/PositionFactory.h src/Position.h \
-  src/Positions.h src/ObjectServices.h src/SoldierServices.h \
-  src/TerrainServices.h src/Terrain.h src/TerrainType.h \
-  src/TerrainProperty.h src/MapManager.h src/MapFactory.h src/Map.h \
-  src/Matrix.h src/Maps.h src/MapServices.h src/ArmourManager.h \
-  src/ArmourFactory.h src/ArmourHelm.h src/ArmourMail.h \
-  src/ArmourBracers.h src/ArmourGreaves.h src/ArmourBoots.h \
-  src/ArmourShield.h src/ArmourCloak.h src/WeaponManager.h \
-  src/WeaponFactory.h src/WeaponAxe.h src/WeaponSword.h src/WeaponBow.h \
-  src/WeaponKnife.h src/WeaponHalberd.h src/WeaponClub.h \
-  src/WeaponMagicWand.h src/Battalion.h
-obj/linux/CombatSoldierAgainstSoldier.o: src/CombatSoldierAgainstSoldier.cpp \
-  src/CombatSoldierAgainstSoldier.h src/Combat.h src/CombatType.h \
-  src/Object.h src/Actions.h src/Action.h src/ActionType.h src/Global.h \
-  src/SoldierManager.h src/SoldierFactory.h src/Soldier.h \
-  src/SoldierType.h src/Weapons.h src/Weapon.h src/WeaponType.h \
-  src/Armours.h src/Armour.h src/ArmourType.h src/SoldierFootman.h \
-  src/SoldierPikeman.h src/SoldierArcher.h src/SoldierCleric.h \
-  src/SoldierMage.h src/SoldierCavalier.h src/Soldiers.h \
-  src/ActionManager.h src/ActionFactory.h src/ActionWait.h \
-  src/ActionHighAttack.h src/ActionLowAttack.h src/ActionHighBlock.h \
-  src/ActionLowBlock.h src/ActionHighParry.h src/ActionLowParry.h \
-  src/ActionDamage.h src/ActionHeal.h src/ActionRevive.h \
-  src/ActionDestruction.h src/CombatManager.h src/CombatFactory.h \
-  src/CombatSimple.h src/CombatSoldierAgainstBattalion.h \
-  src/CombatBattalionAgainstSoldier.h \
-  src/CombatBattalionAgainstBattalion.h src/Combats.h \
-  src/PositionManager.h src/PositionFactory.h src/Position.h \
-  src/Positions.h src/ObjectServices.h src/SoldierServices.h \
-  src/TerrainServices.h src/Terrain.h src/TerrainType.h \
-  src/TerrainProperty.h src/MapManager.h src/MapFactory.h src/Map.h \
-  src/Matrix.h src/Maps.h src/MapServices.h src/ArmourManager.h \
-  src/ArmourFactory.h src/ArmourHelm.h src/ArmourMail.h \
-  src/ArmourBracers.h src/ArmourGreaves.h src/ArmourBoots.h \
-  src/ArmourShield.h src/ArmourCloak.h src/WeaponManager.h \
-  src/WeaponFactory.h src/WeaponAxe.h src/WeaponSword.h src/WeaponBow.h \
-  src/WeaponKnife.h src/WeaponHalberd.h src/WeaponClub.h \
-  src/WeaponMagicWand.h
+ src/Battalion.h src/Object.h src/Soldier.h src/SoldierType.h \
+ src/Weapons.h src/Weapon.h src/WeaponType.h src/Armours.h src/Armour.h \
+ src/ArmourType.h src/Soldiers.h src/Battalions.h
 obj/linux/CTest.o: src/CTest.cpp src/ITest.h src/Soldier.h src/Object.h \
-  src/SoldierType.h src/Weapons.h src/Weapon.h src/WeaponType.h \
-  src/Armours.h src/Armour.h src/ArmourType.h src/Soldiers.h \
-  src/SoldierFactory.h src/SoldierFootman.h src/SoldierPikeman.h \
-  src/SoldierArcher.h src/SoldierCleric.h src/SoldierMage.h \
-  src/SoldierCavalier.h src/SoldierManager.h src/SoldierServices.h \
-  src/Combat.h src/CombatType.h src/Actions.h src/Action.h \
-  src/ActionType.h src/CombatSimple.h src/Combats.h src/CombatFactory.h \
-  src/CombatSoldierAgainstSoldier.h src/CombatSoldierAgainstBattalion.h \
-  src/CombatBattalionAgainstSoldier.h \
-  src/CombatBattalionAgainstBattalion.h src/CombatManager.h \
-  src/ActionFactory.h src/ActionWait.h src/ActionHighAttack.h \
-  src/ActionLowAttack.h src/ActionHighBlock.h src/ActionLowBlock.h \
-  src/ActionHighParry.h src/ActionLowParry.h src/ActionDamage.h \
-  src/ActionHeal.h src/ActionRevive.h src/ActionDestruction.h \
-  src/ActionManager.h src/Position.h src/Positions.h \
-  src/PositionFactory.h src/PositionManager.h src/Battalion.h \
-  src/Battalions.h src/BattalionFactory.h src/BattalionManager.h \
-  src/BattalionServices.h src/Matrix.h src/Terrain.h src/TerrainType.h \
-  src/TerrainProperty.h src/TerrainFactory.h src/TerrainGrass.h \
-  src/TerrainRock.h src/TerrainWater.h src/TerrainSand.h \
-  src/TerrainWood.h src/TerrainPath.h src/TerrainManager.h src/Terrains.h \
-  src/Map.h src/Maps.h src/MapFactory.h src/MapManager.h \
-  src/MapServices.h src/Battlefield.h src/WeaponFactory.h src/WeaponAxe.h \
-  src/WeaponSword.h src/WeaponBow.h src/WeaponKnife.h src/WeaponHalberd.h \
-  src/WeaponClub.h src/WeaponMagicWand.h src/WeaponManager.h \
-  src/ArmourFactory.h src/ArmourHelm.h src/ArmourMail.h \
-  src/ArmourBracers.h src/ArmourGreaves.h src/ArmourBoots.h \
-  src/ArmourShield.h src/ArmourCloak.h src/ArmourManager.h src/Shop.h \
-  src/Shops.h src/ShopFactory.h src/ShopManager.h
+ src/SoldierType.h src/Weapons.h src/Weapon.h src/WeaponType.h \
+ src/Armours.h src/Armour.h src/ArmourType.h src/Soldiers.h \
+ src/SoldierFactory.h src/SoldierFootman.h src/SoldierPikeman.h \
+ src/SoldierArcher.h src/SoldierCleric.h src/SoldierMage.h \
+ src/SoldierCavalier.h src/SoldierMessenger.h src/SoldierManager.h \
+ src/SoldierServices.h src/Combat.h src/CombatType.h src/Actions.h \
+ src/Action.h src/ActionType.h src/CombatSimple.h src/Combats.h \
+ src/CombatFactory.h src/CombatSoldierAgainstSoldier.h \
+ src/CombatSoldierAgainstBattalion.h src/CombatBattalionAgainstSoldier.h \
+ src/CombatBattalionAgainstBattalion.h src/CombatManager.h \
+ src/ActionFactory.h src/ActionWait.h src/ActionHighAttack.h \
+ src/ActionLowAttack.h src/ActionHighBlock.h src/ActionLowBlock.h \
+ src/ActionHighParry.h src/ActionLowParry.h src/ActionDamage.h \
+ src/ActionHeal.h src/ActionRevive.h src/ActionDestruction.h \
+ src/ActionManager.h src/Position.h src/Positions.h src/PositionFactory.h \
+ src/PositionManager.h src/PositionServices.h src/Battalion.h \
+ src/Battalions.h src/BattalionFactory.h src/BattalionManager.h \
+ src/BattalionServices.h src/Matrix.h src/Terrain.h src/TerrainType.h \
+ src/TerrainProperty.h src/TerrainFactory.h src/TerrainGrass.h \
+ src/TerrainRock.h src/TerrainWater.h src/TerrainSand.h src/TerrainWood.h \
+ src/TerrainPath.h src/TerrainManager.h src/Terrains.h src/Map.h \
+ src/Maps.h src/MapFactory.h src/MapManager.h src/MapServices.h \
+ src/Battlefield.h src/WeaponFactory.h src/WeaponAxe.h src/WeaponSword.h \
+ src/WeaponBow.h src/WeaponKnife.h src/WeaponHalberd.h src/WeaponClub.h \
+ src/WeaponMagicWand.h src/WeaponManager.h src/ArmourFactory.h \
+ src/ArmourHelm.h src/ArmourMail.h src/ArmourBracers.h \
+ src/ArmourGreaves.h src/ArmourBoots.h src/ArmourShield.h \
+ src/ArmourCloak.h src/ArmourManager.h src/Shop.h src/Shops.h \
+ src/ShopFactory.h src/ShopManager.h src/Input.h src/InputType.h \
+ src/Commands.h src/Command.h src/CommandType.h
+obj/linux/CombatBattalionAgainstBattalion.o: \
+ src/CombatBattalionAgainstBattalion.cpp \
+ src/CombatBattalionAgainstBattalion.h src/Combat.h src/CombatType.h \
+ src/Object.h src/Actions.h src/Action.h src/ActionType.h src/Global.h \
+ src/SoldierManager.h src/SoldierFactory.h src/Soldier.h \
+ src/SoldierType.h src/Weapons.h src/Weapon.h src/WeaponType.h \
+ src/Armours.h src/Armour.h src/ArmourType.h src/SoldierFootman.h \
+ src/SoldierPikeman.h src/SoldierArcher.h src/SoldierCleric.h \
+ src/SoldierMage.h src/SoldierCavalier.h src/SoldierMessenger.h \
+ src/Soldiers.h src/ActionManager.h src/ActionFactory.h src/ActionWait.h \
+ src/ActionHighAttack.h src/ActionLowAttack.h src/ActionHighBlock.h \
+ src/ActionLowBlock.h src/ActionHighParry.h src/ActionLowParry.h \
+ src/ActionDamage.h src/ActionHeal.h src/ActionRevive.h \
+ src/ActionDestruction.h src/CombatManager.h src/CombatFactory.h \
+ src/CombatSimple.h src/CombatSoldierAgainstSoldier.h \
+ src/CombatSoldierAgainstBattalion.h src/CombatBattalionAgainstSoldier.h \
+ src/Combats.h src/PositionManager.h src/PositionFactory.h src/Position.h \
+ src/Positions.h src/ObjectServices.h src/SoldierServices.h \
+ src/TerrainServices.h src/Terrain.h src/TerrainType.h \
+ src/TerrainProperty.h src/MapManager.h src/MapFactory.h src/Map.h \
+ src/Matrix.h src/Maps.h src/MapServices.h src/ArmourManager.h \
+ src/ArmourFactory.h src/ArmourHelm.h src/ArmourMail.h \
+ src/ArmourBracers.h src/ArmourGreaves.h src/ArmourBoots.h \
+ src/ArmourShield.h src/ArmourCloak.h src/WeaponManager.h \
+ src/WeaponFactory.h src/WeaponAxe.h src/WeaponSword.h src/WeaponBow.h \
+ src/WeaponKnife.h src/WeaponHalberd.h src/WeaponClub.h \
+ src/WeaponMagicWand.h src/Battalion.h
+obj/linux/CombatBattalionAgainstSoldier.o: src/CombatBattalionAgainstSoldier.cpp \
+ src/CombatBattalionAgainstSoldier.h src/Combat.h src/CombatType.h \
+ src/Object.h src/Actions.h src/Action.h src/ActionType.h src/Global.h \
+ src/SoldierManager.h src/SoldierFactory.h src/Soldier.h \
+ src/SoldierType.h src/Weapons.h src/Weapon.h src/WeaponType.h \
+ src/Armours.h src/Armour.h src/ArmourType.h src/SoldierFootman.h \
+ src/SoldierPikeman.h src/SoldierArcher.h src/SoldierCleric.h \
+ src/SoldierMage.h src/SoldierCavalier.h src/SoldierMessenger.h \
+ src/Soldiers.h src/ActionManager.h src/ActionFactory.h src/ActionWait.h \
+ src/ActionHighAttack.h src/ActionLowAttack.h src/ActionHighBlock.h \
+ src/ActionLowBlock.h src/ActionHighParry.h src/ActionLowParry.h \
+ src/ActionDamage.h src/ActionHeal.h src/ActionRevive.h \
+ src/ActionDestruction.h src/CombatManager.h src/CombatFactory.h \
+ src/CombatSimple.h src/CombatSoldierAgainstSoldier.h \
+ src/CombatSoldierAgainstBattalion.h \
+ src/CombatBattalionAgainstBattalion.h src/Combats.h \
+ src/PositionManager.h src/PositionFactory.h src/Position.h \
+ src/Positions.h src/ObjectServices.h src/SoldierServices.h \
+ src/TerrainServices.h src/Terrain.h src/TerrainType.h \
+ src/TerrainProperty.h src/MapManager.h src/MapFactory.h src/Map.h \
+ src/Matrix.h src/Maps.h src/MapServices.h src/ArmourManager.h \
+ src/ArmourFactory.h src/ArmourHelm.h src/ArmourMail.h \
+ src/ArmourBracers.h src/ArmourGreaves.h src/ArmourBoots.h \
+ src/ArmourShield.h src/ArmourCloak.h src/WeaponManager.h \
+ src/WeaponFactory.h src/WeaponAxe.h src/WeaponSword.h src/WeaponBow.h \
+ src/WeaponKnife.h src/WeaponHalberd.h src/WeaponClub.h \
+ src/WeaponMagicWand.h src/Battalion.h
+obj/linux/CombatSoldierAgainstBattalion.o: src/CombatSoldierAgainstBattalion.cpp \
+ src/CombatSoldierAgainstBattalion.h src/Combat.h src/CombatType.h \
+ src/Object.h src/Actions.h src/Action.h src/ActionType.h src/Global.h \
+ src/SoldierManager.h src/SoldierFactory.h src/Soldier.h \
+ src/SoldierType.h src/Weapons.h src/Weapon.h src/WeaponType.h \
+ src/Armours.h src/Armour.h src/ArmourType.h src/SoldierFootman.h \
+ src/SoldierPikeman.h src/SoldierArcher.h src/SoldierCleric.h \
+ src/SoldierMage.h src/SoldierCavalier.h src/SoldierMessenger.h \
+ src/Soldiers.h src/ActionManager.h src/ActionFactory.h src/ActionWait.h \
+ src/ActionHighAttack.h src/ActionLowAttack.h src/ActionHighBlock.h \
+ src/ActionLowBlock.h src/ActionHighParry.h src/ActionLowParry.h \
+ src/ActionDamage.h src/ActionHeal.h src/ActionRevive.h \
+ src/ActionDestruction.h src/CombatManager.h src/CombatFactory.h \
+ src/CombatSimple.h src/CombatSoldierAgainstSoldier.h \
+ src/CombatBattalionAgainstSoldier.h \
+ src/CombatBattalionAgainstBattalion.h src/Combats.h \
+ src/PositionManager.h src/PositionFactory.h src/Position.h \
+ src/Positions.h src/ObjectServices.h src/SoldierServices.h \
+ src/TerrainServices.h src/Terrain.h src/TerrainType.h \
+ src/TerrainProperty.h src/MapManager.h src/MapFactory.h src/Map.h \
+ src/Matrix.h src/Maps.h src/MapServices.h src/ArmourManager.h \
+ src/ArmourFactory.h src/ArmourHelm.h src/ArmourMail.h \
+ src/ArmourBracers.h src/ArmourGreaves.h src/ArmourBoots.h \
+ src/ArmourShield.h src/ArmourCloak.h src/WeaponManager.h \
+ src/WeaponFactory.h src/WeaponAxe.h src/WeaponSword.h src/WeaponBow.h \
+ src/WeaponKnife.h src/WeaponHalberd.h src/WeaponClub.h \
+ src/WeaponMagicWand.h src/Battalion.h
+obj/linux/CombatSoldierAgainstSoldier.o: src/CombatSoldierAgainstSoldier.cpp \
+ src/CombatSoldierAgainstSoldier.h src/Combat.h src/CombatType.h \
+ src/Object.h src/Actions.h src/Action.h src/ActionType.h src/Global.h \
+ src/SoldierManager.h src/SoldierFactory.h src/Soldier.h \
+ src/SoldierType.h src/Weapons.h src/Weapon.h src/WeaponType.h \
+ src/Armours.h src/Armour.h src/ArmourType.h src/SoldierFootman.h \
+ src/SoldierPikeman.h src/SoldierArcher.h src/SoldierCleric.h \
+ src/SoldierMage.h src/SoldierCavalier.h src/SoldierMessenger.h \
+ src/Soldiers.h src/ActionManager.h src/ActionFactory.h src/ActionWait.h \
+ src/ActionHighAttack.h src/ActionLowAttack.h src/ActionHighBlock.h \
+ src/ActionLowBlock.h src/ActionHighParry.h src/ActionLowParry.h \
+ src/ActionDamage.h src/ActionHeal.h src/ActionRevive.h \
+ src/ActionDestruction.h src/CombatManager.h src/CombatFactory.h \
+ src/CombatSimple.h src/CombatSoldierAgainstBattalion.h \
+ src/CombatBattalionAgainstSoldier.h \
+ src/CombatBattalionAgainstBattalion.h src/Combats.h \
+ src/PositionManager.h src/PositionFactory.h src/Position.h \
+ src/Positions.h src/ObjectServices.h src/SoldierServices.h \
+ src/TerrainServices.h src/Terrain.h src/TerrainType.h \
+ src/TerrainProperty.h src/MapManager.h src/MapFactory.h src/Map.h \
+ src/Matrix.h src/Maps.h src/MapServices.h src/ArmourManager.h \
+ src/ArmourFactory.h src/ArmourHelm.h src/ArmourMail.h \
+ src/ArmourBracers.h src/ArmourGreaves.h src/ArmourBoots.h \
+ src/ArmourShield.h src/ArmourCloak.h src/WeaponManager.h \
+ src/WeaponFactory.h src/WeaponAxe.h src/WeaponSword.h src/WeaponBow.h \
+ src/WeaponKnife.h src/WeaponHalberd.h src/WeaponClub.h \
+ src/WeaponMagicWand.h
 obj/linux/Global.o: src/Global.cpp src/Global.h src/SoldierManager.h \
-  src/SoldierFactory.h src/Soldier.h src/Object.h src/SoldierType.h \
-  src/Weapons.h src/Weapon.h src/WeaponType.h src/Armours.h src/Armour.h \
-  src/ArmourType.h src/SoldierFootman.h src/SoldierPikeman.h \
-  src/SoldierArcher.h src/SoldierCleric.h src/SoldierMage.h \
-  src/SoldierCavalier.h src/Soldiers.h src/ActionManager.h \
-  src/ActionFactory.h src/Action.h src/ActionType.h src/ActionWait.h \
-  src/ActionHighAttack.h src/ActionLowAttack.h src/ActionHighBlock.h \
-  src/ActionLowBlock.h src/ActionHighParry.h src/ActionLowParry.h \
-  src/ActionDamage.h src/ActionHeal.h src/ActionRevive.h \
-  src/ActionDestruction.h src/Actions.h src/CombatManager.h \
-  src/CombatType.h src/CombatFactory.h src/Combat.h src/CombatSimple.h \
-  src/CombatSoldierAgainstSoldier.h src/CombatSoldierAgainstBattalion.h \
-  src/CombatBattalionAgainstSoldier.h \
-  src/CombatBattalionAgainstBattalion.h src/Combats.h \
-  src/PositionManager.h src/PositionFactory.h src/Position.h \
-  src/Positions.h src/ObjectServices.h src/SoldierServices.h \
-  src/TerrainServices.h src/Terrain.h src/TerrainType.h \
-  src/TerrainProperty.h src/MapManager.h src/MapFactory.h src/Map.h \
-  src/Matrix.h src/Maps.h src/MapServices.h src/ArmourManager.h \
-  src/ArmourFactory.h src/ArmourHelm.h src/ArmourMail.h \
-  src/ArmourBracers.h src/ArmourGreaves.h src/ArmourBoots.h \
-  src/ArmourShield.h src/ArmourCloak.h src/WeaponManager.h \
-  src/WeaponFactory.h src/WeaponAxe.h src/WeaponSword.h src/WeaponBow.h \
-  src/WeaponKnife.h src/WeaponHalberd.h src/WeaponClub.h \
-  src/WeaponMagicWand.h
+ src/SoldierFactory.h src/Soldier.h src/Object.h src/SoldierType.h \
+ src/Weapons.h src/Weapon.h src/WeaponType.h src/Armours.h src/Armour.h \
+ src/ArmourType.h src/SoldierFootman.h src/SoldierPikeman.h \
+ src/SoldierArcher.h src/SoldierCleric.h src/SoldierMage.h \
+ src/SoldierCavalier.h src/SoldierMessenger.h src/Soldiers.h \
+ src/ActionManager.h src/ActionFactory.h src/Action.h src/ActionType.h \
+ src/ActionWait.h src/ActionHighAttack.h src/ActionLowAttack.h \
+ src/ActionHighBlock.h src/ActionLowBlock.h src/ActionHighParry.h \
+ src/ActionLowParry.h src/ActionDamage.h src/ActionHeal.h \
+ src/ActionRevive.h src/ActionDestruction.h src/Actions.h \
+ src/CombatManager.h src/CombatType.h src/CombatFactory.h src/Combat.h \
+ src/CombatSimple.h src/CombatSoldierAgainstSoldier.h \
+ src/CombatSoldierAgainstBattalion.h src/CombatBattalionAgainstSoldier.h \
+ src/CombatBattalionAgainstBattalion.h src/Combats.h \
+ src/PositionManager.h src/PositionFactory.h src/Position.h \
+ src/Positions.h src/ObjectServices.h src/SoldierServices.h \
+ src/TerrainServices.h src/Terrain.h src/TerrainType.h \
+ src/TerrainProperty.h src/MapManager.h src/MapFactory.h src/Map.h \
+ src/Matrix.h src/Maps.h src/MapServices.h src/ArmourManager.h \
+ src/ArmourFactory.h src/ArmourHelm.h src/ArmourMail.h \
+ src/ArmourBracers.h src/ArmourGreaves.h src/ArmourBoots.h \
+ src/ArmourShield.h src/ArmourCloak.h src/WeaponManager.h \
+ src/WeaponFactory.h src/WeaponAxe.h src/WeaponSword.h src/WeaponBow.h \
+ src/WeaponKnife.h src/WeaponHalberd.h src/WeaponClub.h \
+ src/WeaponMagicWand.h
 obj/linux/Object.o: src/Object.cpp src/Object.h
 obj/linux/SoldierServices.o: src/SoldierServices.cpp src/SoldierServices.h \
-  src/Soldier.h src/Object.h src/SoldierType.h src/Weapons.h src/Weapon.h \
-  src/WeaponType.h src/Armours.h src/Armour.h src/ArmourType.h \
-  src/Soldiers.h src/Combat.h src/CombatType.h src/Actions.h src/Action.h \
-  src/ActionType.h src/Global.h src/SoldierManager.h src/SoldierFactory.h \
-  src/SoldierFootman.h src/SoldierPikeman.h src/SoldierArcher.h \
-  src/SoldierCleric.h src/SoldierMage.h src/SoldierCavalier.h \
-  src/ActionManager.h src/ActionFactory.h src/ActionWait.h \
-  src/ActionHighAttack.h src/ActionLowAttack.h src/ActionHighBlock.h \
-  src/ActionLowBlock.h src/ActionHighParry.h src/ActionLowParry.h \
-  src/ActionDamage.h src/ActionHeal.h src/ActionRevive.h \
-  src/ActionDestruction.h src/CombatManager.h src/CombatFactory.h \
-  src/CombatSimple.h src/CombatSoldierAgainstSoldier.h \
-  src/CombatSoldierAgainstBattalion.h src/CombatBattalionAgainstSoldier.h \
-  src/CombatBattalionAgainstBattalion.h src/Combats.h \
-  src/PositionManager.h src/PositionFactory.h src/Position.h \
-  src/Positions.h src/ObjectServices.h src/TerrainServices.h \
-  src/Terrain.h src/TerrainType.h src/TerrainProperty.h src/MapManager.h \
-  src/MapFactory.h src/Map.h src/Matrix.h src/Maps.h src/MapServices.h \
-  src/ArmourManager.h src/ArmourFactory.h src/ArmourHelm.h \
-  src/ArmourMail.h src/ArmourBracers.h src/ArmourGreaves.h \
-  src/ArmourBoots.h src/ArmourShield.h src/ArmourCloak.h \
-  src/WeaponManager.h src/WeaponFactory.h src/WeaponAxe.h \
-  src/WeaponSword.h src/WeaponBow.h src/WeaponKnife.h src/WeaponHalberd.h \
-  src/WeaponClub.h src/WeaponMagicWand.h
+ src/Soldier.h src/Object.h src/SoldierType.h src/Weapons.h src/Weapon.h \
+ src/WeaponType.h src/Armours.h src/Armour.h src/ArmourType.h \
+ src/Soldiers.h src/Combat.h src/CombatType.h src/Actions.h src/Action.h \
+ src/ActionType.h src/Global.h src/SoldierManager.h src/SoldierFactory.h \
+ src/SoldierFootman.h src/SoldierPikeman.h src/SoldierArcher.h \
+ src/SoldierCleric.h src/SoldierMage.h src/SoldierCavalier.h \
+ src/SoldierMessenger.h src/ActionManager.h src/ActionFactory.h \
+ src/ActionWait.h src/ActionHighAttack.h src/ActionLowAttack.h \
+ src/ActionHighBlock.h src/ActionLowBlock.h src/ActionHighParry.h \
+ src/ActionLowParry.h src/ActionDamage.h src/ActionHeal.h \
+ src/ActionRevive.h src/ActionDestruction.h src/CombatManager.h \
+ src/CombatFactory.h src/CombatSimple.h src/CombatSoldierAgainstSoldier.h \
+ src/CombatSoldierAgainstBattalion.h src/CombatBattalionAgainstSoldier.h \
+ src/CombatBattalionAgainstBattalion.h src/Combats.h \
+ src/PositionManager.h src/PositionFactory.h src/Position.h \
+ src/Positions.h src/ObjectServices.h src/TerrainServices.h src/Terrain.h \
+ src/TerrainType.h src/TerrainProperty.h src/MapManager.h \
+ src/MapFactory.h src/Map.h src/Matrix.h src/Maps.h src/MapServices.h \
+ src/ArmourManager.h src/ArmourFactory.h src/ArmourHelm.h \
+ src/ArmourMail.h src/ArmourBracers.h src/ArmourGreaves.h \
+ src/ArmourBoots.h src/ArmourShield.h src/ArmourCloak.h \
+ src/WeaponManager.h src/WeaponFactory.h src/WeaponAxe.h \
+ src/WeaponSword.h src/WeaponBow.h src/WeaponKnife.h src/WeaponHalberd.h \
+ src/WeaponClub.h src/WeaponMagicWand.h
